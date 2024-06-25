@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Electron with GPIO</title>
+</head>
+<body>
+<div id="app">
+    <h2>客户端对讲</h2>
+    <button @click="toggleCall" :disabled="isLoggingIn">{{ isTalking ? '结束对讲' : '开始对讲' }}</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="renderer.js"></script>
+</body>
+</html>
