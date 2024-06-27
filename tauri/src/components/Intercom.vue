@@ -7,12 +7,18 @@
 
 <script>
 import { invoke } from '@tauri-apps/api/tauri';
+import { listen } from '@tauri-apps/api/event';
 
 export default {
   data() {
     return {
       isTalking: false, // 对讲状态
     };
+  },
+  mounted() {
+    listen('gpio-button-pressed', () => {
+      this.toggleCall();
+    });
   },
   methods: {
     toggleCall() {
